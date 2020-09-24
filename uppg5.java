@@ -18,7 +18,7 @@ public class uppg5 {
         System.out.println(bmi);
         System.out.println(lenght);
         System.out.println(weight);
-        if(bmi < 15) {
+        if(bmi <= 15) {
             System.out.println("Ditt BMI är väldigt lågt," + bmi + ". Du klassas som svältande. Försök att gå upp i vikt");
         }
         else if(bmi <= 18.5) {
@@ -27,13 +27,13 @@ public class uppg5 {
         else if(bmi >= 18.5 && bmi <= 25) {
             System.out.println("Ditt BMI är normalt," + bmi + ".");
         }
-        else if(bmi >= 25 ) {
+        else if(bmi > 25 ) {
             
             if (bmi <= 30 ) {
-            System.out.println("Ditt BMI är högre än normalt" + bmi + ". Du är överviktig. Ät mindre.");
+            System.out.println("Ditt BMI är högre än normalt " +  bmi + ". Du är överviktig. Ät mindre.");
             }
-            else if (bmi > 40) {
-                System.out.println("Du är fet" + bmi + ". Banta mera.");
+            else if (bmi > 40 || bmi <= 40 ) {
+                System.out.println("Du är fet " +  bmi + ". Banta mera.");
             }
         }
         else 
