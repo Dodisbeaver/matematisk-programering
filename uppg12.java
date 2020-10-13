@@ -15,32 +15,34 @@ public class uppg12 {
         userInput = intInputCheck(0, Integer.MAX_VALUE);
         
         
-        double popInt[] = new double[userInput];
+        double tempArray[] = new double[userInput];
         
         
         for (int i = 0; i < userInput; i++){
             System.out.println("Temperaturvärde nr " + (i + 1));
             
-            popInt[i] = input.nextDouble();
+            tempArray[i] = input.nextDouble();
             
         }
         double median = 0;
-
-        if ((userInput%2) == 0) {
-                       
+        
+        if ((userInput%2) == 1) {
+                 median = tempArray[((userInput+1)/2)-1];      
+        } else {
+            median = (tempArray[userInput/2-1]+tempArray[userInput/2])/2;
         }
         
-        double middleNr = popInt[0];
+    
         
         double meanNr = 0;
         for (int i = 0; i < userInput; i++) {
 
-            meanNr = (popInt[i] + meanNr);
+            meanNr = (tempArray[i] + meanNr);
         }
 
 
         meanNr = (meanNr/userInput);
-        System.out.println("\nMedel värdet: " + meanNr);
+        System.out.println("\nMedeltemperaturen är: " + meanNr + "\n Mediantemperaturen är: " + median);
 
         input.close();
     }
